@@ -7,7 +7,7 @@ class Repository(private val db: UserDatabase) {
 
     fun upsert(postData: User) = db.getArticleDao().upsert(postData)
 
-    suspend fun getUsers() = db.getArticleDao().getAllUsers()
+    fun getUsers() = db.getArticleDao().getAllUsers()
 
 
 }

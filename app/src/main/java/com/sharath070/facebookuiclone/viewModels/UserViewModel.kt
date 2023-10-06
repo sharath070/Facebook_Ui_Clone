@@ -13,9 +13,6 @@ class UserViewModel(private val userRepository: Repository) : ViewModel() {
         userRepository.upsert(user)
     }
 
-
-    suspend fun getUsers(): List<User> {
-        return userRepository.getUsers()
-    }
+    fun getUsers() = userRepository.getUsers()
 
 }

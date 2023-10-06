@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.sharath070.facebookuiclone.model.User
 
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [User::class], version = 2)
 abstract class UserDatabase: RoomDatabase() {
 
     abstract fun getArticleDao(): UserDao
