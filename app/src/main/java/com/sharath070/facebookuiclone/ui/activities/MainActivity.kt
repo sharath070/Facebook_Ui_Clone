@@ -1,18 +1,32 @@
-package com.sharath070.facebookuiclone
+package com.sharath070.facebookuiclone.ui.activities
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
+import com.sharath070.facebookuiclone.R
+import com.sharath070.facebookuiclone.db.UserDatabase
+import com.sharath070.facebookuiclone.repository.Repository
+import com.sharath070.facebookuiclone.viewModels.UserViewModel
+import com.sharath070.facebookuiclone.viewModels.UserViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var sharedPreferences: SharedPreferences
 
+    lateinit var viewModel: UserViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val postsRepository = Repository(UserDatabase.getDatabase(this))
+        val viewModelProviderFactory = UserViewModelFactory(postsRepository)
+        viewModel = ViewModelProvider(this, viewModelProviderFactory)[UserViewModel::class.java]
+
 
         sharedPreferences = getSharedPreferences("isLoggedIn", Context.MODE_PRIVATE)
         val isLoggedIn = sharedPreferences.getBoolean("login", false)

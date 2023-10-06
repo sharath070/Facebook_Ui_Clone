@@ -1,4 +1,4 @@
-package com.sharath070.facebookuiclone
+package com.sharath070.facebookuiclone.ui.activities
 
 import android.app.ActivityOptions
 import android.content.Intent
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.sharath070.facebookuiclone.R
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

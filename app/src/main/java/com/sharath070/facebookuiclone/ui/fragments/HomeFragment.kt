@@ -1,4 +1,4 @@
-package com.sharath070.facebookuiclone
+package com.sharath070.facebookuiclone.ui.fragments
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,8 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.sharath070.facebookuiclone.R
 import com.sharath070.facebookuiclone.databinding.FragmentHomeBinding
-import com.sharath070.facebookuiclone.databinding.FragmentLoginBinding
 
 
 class HomeFragment : Fragment() {
