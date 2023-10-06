@@ -48,6 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:hint="Enter a Password"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/text_light_gray"
         app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -60,6 +62,7 @@
 
         <EditText
             android:id="@+id/createPassword"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
@@ -106,7 +109,7 @@
             android:layout_height="match_parent"
             android:backgroundTint="@color/fb_blue"
             android:textColor="@color/white"
-            android:text="Create User"
+            android:text="Create"
             android:layout_weight="1"
             android:textSize="14sp"
             android:layout_marginLeft="10dp"

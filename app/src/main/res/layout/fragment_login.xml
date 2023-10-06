@@ -67,6 +67,8 @@
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="8dp"
         android:hint="Password"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/text_light_gray"
         app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -84,6 +86,7 @@
 
         <EditText
             android:id="@+id/edtPassword"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
