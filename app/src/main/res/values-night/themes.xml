@@ -6,27 +6,4 @@
     </style>
 
 
-    <style name="CustomOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <!-- Customize the box stroke color and width as needed -->
-        <item name="boxStrokeColor">@color/text_light_gray</item>
-        <item name="boxStrokeWidth">2dp</item>
-        <item name="android:paddingTop">16dp</item> <!-- Top padding for default state -->
-        <item name="android:paddingStart">16dp</item> <!-- Start padding for default state -->
-        <item name="android:paddingEnd">16dp</item> <!-- End padding for default state -->
-        <item name="android:paddingBottom">8dp</item> <!-- Bottom padding for default state -->
-    </style>
-
-    <style name="CustomOutlinedBox.Focused">
-        <!-- Increase the hint text size and adjust padding for focused state -->
-        <item name="hintTextAppearance">@style/CustomHintTextAppearance</item>
-        <item name="android:paddingTop">4dp</item> <!-- Top padding for focused state -->
-        <item name="android:paddingStart">4dp</item> <!-- Start padding for focused state -->
-        <item name="android:paddingEnd">4dp</item> <!-- End padding for focused state -->
-        <item name="android:paddingBottom">0dp</item> <!-- Bottom padding for focused state -->
-    </style>
-
-    <style name="CustomHintTextAppearance" parent="@style/TextAppearance.AppCompat">
-        <item name="android:textSize">16sp</item> <!-- Adjust hint text size for focused state -->
-    </style>
-
 </resources>
