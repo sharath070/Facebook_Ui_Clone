@@ -35,16 +35,14 @@ class HomeFragment : Fragment() {
         binding.button.setOnClickListener {
 
             sharedPreferences.edit().putBoolean("login", false).apply()
-            findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
+            findNavController().popBackStack(R.id.homeFragment, true)
 
         }
-
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }

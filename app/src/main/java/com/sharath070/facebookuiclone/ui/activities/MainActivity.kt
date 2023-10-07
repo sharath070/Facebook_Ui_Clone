@@ -10,6 +10,7 @@ import androidx.navigation.fragment.NavHostFragment
 import com.sharath070.facebookuiclone.R
 import com.sharath070.facebookuiclone.db.UserDatabase
 import com.sharath070.facebookuiclone.repository.Repository
+import com.sharath070.facebookuiclone.ui.fragments.HomeFragment
 import com.sharath070.facebookuiclone.viewModels.UserViewModel
 import com.sharath070.facebookuiclone.viewModels.UserViewModelFactory
 
@@ -43,5 +44,20 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.loginFragment)
         }
 
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val currentFragment = navHostFragment.childFragmentManager.fragments.firstOrNull()
+
+        // Check if the current fragment is the homeFragment
+        if (currentFragment is HomeFragment) {
+            // Exit the app
+            finish()
+        } else {
+            super.onBackPressed()
+        }
     }
 }

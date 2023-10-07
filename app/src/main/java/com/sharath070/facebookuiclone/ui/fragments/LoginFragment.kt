@@ -129,7 +129,7 @@ class LoginFragment : Fragment() {
                 tvRequirements.visibility = View.VISIBLE
             }
         }
-
+        alertDialog.setCancelable(false)
         alertDialog.show()
     }
 
