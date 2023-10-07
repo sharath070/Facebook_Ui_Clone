@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
         binding.button.setOnClickListener {
 
             sharedPreferences.edit().putBoolean("login", false).apply()
-            findNavController().popBackStack(R.id.homeFragment, true)
+            findNavController().popBackStack()
 
         }
     }
